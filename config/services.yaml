@@ -1,0 +1,11 @@
+services:
+    CustomBundle\Controller\:
+        resource: '../Controller/*'
+        tags: ['controller.service_arguments']
+        autowire: true      # Automatically injects dependencies in your services.
+        autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
+
+    CustomBundle\Command\:
+        resource: '../Command/*'
+        autowire: true      # Automatically injects dependencies in your services.
+        autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.

@@ -1,0 +1,24 @@
+{
+    "name": "bisonlab/crewcall-custom-bundle",
+    "type": "symfony-bundle",
+    "description": "Bundle for customizing Crewcall.",
+    "keywords": ["crewcall", "custom"],
+    "homepage": "http://github.com/bisonlab/CrewCall",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Thomas Lundquist",
+            "email": "github@bisonlab.no"
+        }
+    ],
+   "config": {
+        "preferred-install": {
+            "bisonlab/*": "source"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "CustomBundle\\": "../CustomBundle"
+        }
+    }
+}

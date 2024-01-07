@@ -1,0 +1,27 @@
+parameters:
+    crewcall.dashboarder:
+        #
+        # Going backwards through the roles. The one hitting the user first,
+        # is used.
+        # cols is the bootstrap grid columns. 12 per row.
+        roles:
+            ROLE_ADMIN:
+                # Row 1
+                - dashie: "Dummy"
+                  cols: 3
+                - dashie: "Search"
+                  cols: 8
+                - dashie: "Dummy"
+                  cols: 1
+                # Row 2
+                #- dashie: "Dummy"
+                #  cols: 1
+                - dashie: "ComboWall"
+                  cols: 4
+                #  divclass: "noteText"
+                - dashie: "Announcements"
+                  cols: 0
+                #  divclass: "noteText"
+                - dashie: "EventsCalendar"
+                  cols: 8
+

@@ -1,0 +1,150 @@
+parameters:
+    app.contexts:
+        App:
+            Person:
+                economy:
+                  -
+                    label: "Ansattnummer"
+                    object_name: ansatt
+                    type: master
+                    url_template: ""
+                    url_from_method: none
+                    default: false
+                    unique: true
+                    one_per_owner: true
+                old_one:
+                  -
+                    label: "Gamle Vaktonline"
+                    object_name: ansatt
+                    type: master
+                    url_template: "https://vakt.oslokru.com/Admin/endreansatt2.php?ID={{external_id}}"
+                    url_from_method: template
+                    default: false
+                    unique: true
+                    one_per_owner: true
+            Location:
+                old_one:
+                  -
+                    label: "Gamle Vaktonline"
+                    object_name: sted
+                    type: master
+                    url_template: "https://vakt.oslokru.com/Admin/sted.php?frmSelSted={{external_id}}&frmModus=find"
+                    url_from_method: template
+                    default: true
+                    unique: false
+                    one_per_owner: true
+            Organization:
+                old_one:
+                  -
+                    label: "Gamle Vaktonline"
+                    object_name: kunde
+                    type: master
+                    url_template: "https://vakt.oslokru.com/Admin/kunde.php?frmSelKunde={{external_id}}&frmModus=find"
+                    url_from_method: template
+                    default: true
+                    unique: true
+                    one_per_owner: false
+        BisonLabSakonninBundle:
+            Message:
+                crewcall:
+                  -
+                    label: "Person"
+                    object_name: person
+                    type: master
+                    url_template: "/web/person/{{external_id}}"
+                    url_from_method: template
+                    default: false
+                    unique: false
+                    one_per_owner: false
+                  -
+                    label: "Front page"
+                    object_name: frontpage
+                    type: master
+                    url_template: "/"
+                    url_from_method: template
+                    default: false
+                    unique: false
+                    one_per_owner: false
+                  -
+                    label: "Event"
+                    object_name: event
+                    type: master
+                    url_template: "/web/event/{{external_id}}"
+                    url_from_method: template
+                    default: false
+                    unique: false
+                    one_per_owner: false
+                  -
+                    label: "Location"
+                    object_name: location
+                    type: master
+                    url_template: "/web/location/{{external_id}}"
+                    url_from_method: template
+                    default: false
+                    unique: false
+                    one_per_owner: false
+                  -
+                    label: "Organization"
+                    object_name: organization
+                    type: master
+                    url_template: "/web/organization/{{external_id}}"
+                    url_from_method: template
+                    default: false
+                    unique: false
+                    one_per_owner: false
+                  -
+                    label: "Shift"
+                    object_name: shift
+                    type: master
+                    url_template: "/web/shift/{{external_id}}"
+                    url_from_method: template
+                    default: false
+                    unique: false
+                    one_per_owner: false
+                  -
+                    label: "Job"
+                    object_name: job
+                    type: master
+                    url_template: "/web/job/{{external_id}}"
+                    url_from_method: template
+                    default: false
+                    unique: false
+                    one_per_owner: false
+            SakonninFile:
+                crewcall:
+                  -
+                    label: "Person"
+                    object_name: person
+                    type: master
+                    url_template: "/web/person/{{external_id}}"
+                    url_from_method: template
+                    default: false
+                    unique: false
+                    one_per_owner: false
+                  -
+                    label: "Event"
+                    object_name: event
+                    type: master
+                    url_template: "/web/event/{{external_id}}"
+                    url_from_method: template
+                    default: false
+                    unique: false
+                    one_per_owner: false
+                  -
+                    label: "Location"
+                    object_name: location
+                    type: master
+                    url_template: "/web/location/{{external_id}}"
+                    url_from_method: template
+                    default: false
+                    unique: false
+                    one_per_owner: false
+                  -
+                    label: "Organization"
+                    object_name: organization
+                    type: master
+                    url_template: "/web/organization/{{external_id}}"
+                    url_from_method: template
+                    default: false
+                    unique: false
+                    one_per_owner: false
