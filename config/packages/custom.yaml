@@ -19,6 +19,14 @@ parameters:
     # where the separate files are 3K.
     fullcalendar_locale: en-gb
 
+    internal_organization:
+        name: "%env(INTERNAL_ORGANIZATION)%"
+        default_role: "%env(DEFAULT_ROLE)%"
+        # If you set this to false the organization and role above will be
+        # added to all new crew members and no option to set others will be
+        # shown. I'd guess this will not be used much.
+        allow_external_crew: "%env(ALLOW_EXTERNAL_CREW)%"
+
     # This is for setting up the address fields. Different countries has
     # different needs, so we need somewhere for defining those needs.
     # Fields you can use is in Entity/EmbeddableAddress in the CrewCallBundle
@@ -100,6 +108,24 @@ parameters:
             attribute: false
             user_editable: false
             user_profile_viewable: false
+        tshirt_size:
+            label: 'T-Shirt size'
+            enabled: true
+            attribute: true
+            user_editable: true
+            user_profile_viewable: true
+        pdga_number:
+            label: 'PDGA Number'
+            enabled: true
+            attribute: true
+            user_editable: true
+            user_profile_viewable: true
+        pdga_certified:
+            label: 'PDGA Certified'
+            enabled: true
+            attribute: true
+            user_editable: true
+            user_profile_viewable: true
         # Not entirely personfields, but nice to configure.
         hours:
             enabled: true
