@@ -22,9 +22,8 @@ use App\Entity\FunctionEntity;
  * Event controller.
  *
  * Nothing to see, just a placeholder and example.
- *
- * @Route("/admin/{access}/custom_event", defaults={"access" = "web"}, requirements={"access": "web|rest|ajax"})
  */
+#[Route(path: '/admin/{access}/custom_event', defaults: ['access' => 'web'], requirements: ['access' => 'web|rest|ajax'])]
 class EventController extends CommonController
 {
 }

@@ -6,10 +6,8 @@ use Knp\Menu\FactoryInterface;
 use Symfony\Component\DependencyInjection\ContainerAwareInterface;
 use Symfony\Component\DependencyInjection\ContainerAwareTrait;
 
-class Builder implements ContainerAwareInterface
+class Builder
 {
-    use ContainerAwareTrait;
-
     public function mainMenu(FactoryInterface $factory, array $options)
     {
         // Seems like the container is not injected here. I am probably calling
@@ -17,7 +15,6 @@ class Builder implements ContainerAwareInterface
         $menu = $options['menu'];
         $user = $options['user'];
         $router = $options['router'];
-        $container = $options['container'];
 
         if ($user->isAdmin()) {
         }

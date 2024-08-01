@@ -7,14 +7,17 @@ use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
+use Symfony\Component\Console\Attribute\AsCommand;
 
 use App\Entity\FunctionEntity;
 
+#[AsCommand(
+    name: 'custom:create-base-functions',
+    description: 'Creates the first set of functions the system needs.'
+)]
 class CreateBaseFunctionCommand extends Command
 {
     use \App\Command\CommonCommandFunctions;
-
-    protected static $defaultName = 'custom:create-base-functions';
 
     private $functions = array(
         array(
@@ -51,12 +54,11 @@ class CreateBaseFunctionCommand extends Command
         ),
     );
 
-    protected function configure()
+    protected function configure(): void
     {
         $this
         ;
         $this->setDefinition(array())
-            ->setDescription('Creates the first set of functions the system needs.')
                 ->setHelp(<<<EOT
 Creates the first set of functions the system needs.
 EOT

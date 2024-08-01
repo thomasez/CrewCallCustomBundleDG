@@ -1,3 +1,3 @@
 CustomBundle:
     resource: "@CustomBundle/Controller/"
-    type:     annotation
+    type:     attribute

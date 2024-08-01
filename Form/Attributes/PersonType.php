@@ -12,7 +12,7 @@ class PersonType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $sizes = ['XS', 'S', 'M', 'L', 'XL', 'XXL'];
+        $sizes = ['XXS', 'XS', 'S', 'M', 'L', 'XL', 'XXL', 'XXXL', 'XXXXL'];
         $builder
             ->add('pdga_number', NumberType::class, [
                 'required' => false,
